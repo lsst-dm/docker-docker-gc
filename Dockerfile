@@ -15,4 +15,4 @@ RUN chmod 0555 /usr/local/bin/docker-gc
 RUN rm -f /etc/crontabs/root
 COPY root /etc/crontabs/root
 
-CMD /usr/sbin/crond -l6 -L /var/log/cron.log && tail -f /var/log/cron.log
+CMD /usr/sbin/crond -l6 -L /var/log/cron.log && tail -F /var/log/cron.log
