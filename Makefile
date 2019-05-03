@@ -2,4 +2,4 @@ all: build
 
 build:
 	docker build \
-		-t lsstsqre/docker-gc-cron .
+		-t lsstsqre/docker-gc .
