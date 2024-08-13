@@ -1,3 +1,4 @@
+---
 name: Lint YAML Files
 
 on:
@@ -7,18 +8,5 @@ on:
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-
-      - name: Install
-        run: pip install yamllint
-
-      - name: Run linter
-        run: yamllint .
+  call-workflow:
+    uses: lsst/rubin_workflows/.github/workflows/yamllint.yaml@main

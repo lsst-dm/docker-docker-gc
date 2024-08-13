@@ -1,9 +1,11 @@
+---
 name: ci
 
 on:
   push:
     branches:
       - master
+      - main
 
 jobs:
   docker:
@@ -27,4 +29,4 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ghcr.io/${{ github.repository }}
+          tags: ghcr.io/${{ github.repository }}:latest

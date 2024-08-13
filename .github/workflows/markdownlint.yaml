@@ -1,3 +1,4 @@
+---
 name: Lint Markdown Files
 
 on:
@@ -7,10 +8,5 @@ on:
   pull_request:
 
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-      - name: Run linter
-        uses: actionshub/markdownlint@main
+  call-workflow:
+    uses: lsst/rubin_workflows/.github/workflows/markdownlint.yaml@main
