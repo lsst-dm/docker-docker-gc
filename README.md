@@ -11,5 +11,5 @@ Usage
 ---
 
 ```sh
-docker run -ti lsstsqre/docker-gc
+docker run -ti ghcr.io/lsst-dm/docker-docker-gc
 ```
